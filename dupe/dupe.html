@@ -1,0 +1,79 @@
+<html desktop-device="" class="ng-scope portal-container">
+   <head>
+      <title>Configuration AutoEnt</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link rel="stylesheet" type="text/css" href="dupe.css" id="theme" crossorigin="anonymous">
+      <link rel="icon" href="favicon.ico">
+   </head>
+   <body class="login ng-scope" ng-controller="LoginController" ng-init="error = &quot;&quot;; callBack = &quot;&quot;; mainPage = &quot;&quot;" style="width: 400px; height: 100px;">
+      <default-styles>
+         <div class="absolute">
+            <div ng-include="template.containers.main" class="ng-scope">
+               <div class="centered container row ng-scope">
+                  <section class="main">
+                     <div class="login panel"
+                        ng-class="{'browser-container': !browser || (browser &amp;&amp; browser.outdated) || !cookieEnabled}">
+                        <h1>
+                           <i18n><span class="no-style ng-scope">AutoEnt</span></i18n>
+                        </h1>
+                        <div class="rigid-grid panels-container">
+                           <!-- Use a form element with the CSS you want to keep -->
+                           <form method="" class="ng-pristine ng-valid" id="loginForm">
+                              <p>
+                                 <label>
+                                    <i18n><span class="no-style ng-scope">Identifiant</span></i18n>
+                                 </label>
+                                 <input type="text" ng-model="user.email" ng-keydown="noSpace($event)"
+                                    ng-change="noUpperCase()" name="email" id="email" autofocus="" tabindex="1"
+                                    class="ng-pristine ng-untouched ng-valid ng-empty">
+                              </p>
+                              <p>
+                                 <label>
+                                    <i18n><span class="no-style ng-scope">Mot de passe</span></i18n>
+                                 </label>
+                                 <input-password
+                                    class="ng-pristine ng-untouched ng-valid toggleable-password ng-scope ng-empty"><input
+                                    type="password" autocomplete="off" ng-model="user.password" name="password"
+                                    id="password" tabindex="2"
+                                    class="ng-pristine ng-untouched ng-valid ng-empty"></input-password>
+                              </p>
+                              <label>
+                                 <span class="no-style ng-scope">Se souviendra de toi</span></small>
+                              </label>
+                              <p></p>
+                              <!-- Add a button to trigger your desired action -->
+                              <button tabindex="3" class="flex-magnet-bottom-right" id="saveButton">
+                                 <i18n><span class="no-style ng-scope">Connexion</span></i18n>
+                              </button>
+                           </form>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </div>
+      </default-styles>
+      <div style="display: none;"></div>
+   </body>
+   <script src="popup.js"></script>
+   <script src="custom.js"></script>
+   <!-- <script>
+      // Get a reference to the form and the button
+      const form = document.getElementById('loginForm');
+      const saveButton = document.getElementById('saveButton');
+
+      // Add an event listener to the button click event
+      saveButton.addEventListener('click', function (event) {
+         // Prevent the default form submission
+         event.preventDefault();
+
+         // You can add your custom logic here
+         // For example, you can validate the form inputs and perform other actions
+         // If you want to submit the form via AJAX, you can do that here.
+
+         // For demonstration purposes, let's just log a message
+         console.log('Form submission prevented.');
+      });
+   </script> -->
+</html>
