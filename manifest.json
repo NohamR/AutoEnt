@@ -1,38 +1,42 @@
 {
-    "manifest_version": 3,
-    "name": "AutoEnt",
-    "version": "1.4",
-    "description": "Rempli l'id et mdp et clique sur connexion",
-    "permissions": ["activeTab", "storage"],
-    "host_permissions": [
-      "https://ent.iledefrance.fr/*",
-      "https://iledefrance.fr/*"
-    ],
-    "content_scripts": [
-      {
-        "matches": [
-          "https://ent.iledefrance.fr/*",
-          "https://iledefrance.fr/*"
-        ],
-        "js": ["content.js"]
-      }
-    ],
-    "background": {
-      "service_worker": "background.js"
+  "manifest_version": 3,
+  "name": "AutoEnt",
+  "version": "1.4",
+  "description": "Rempli l'id et mdp et clique sur connexion",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://ent.iledefrance.fr/*",
+    "https://iledefrance.fr/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ent.iledefrance.fr/*",
+        "https://iledefrance.fr/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    // "default_popup": "temp/popup.html",
+    "default_popup": "dupe/dupe.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
     },
-    "action": {
-      // "default_popup": "temp/popup.html",
-      "default_popup": "dupe/dupe.html",
-      "default_icon": {
-        "16": "images/icon16.png",
-        "48": "images/icon48.png",
-        "128": "images/icon128.png"
-      },
-      "grey_icon": {
-        "16": "images/grey/icon16.png",
-        "48": "images/grey/icon48.png",
-        "128": "images/grey/icon128.png"
-      }
+    "grey_icon": {
+      "16": "images/grey/icon16.png",
+      "48": "images/grey/icon48.png",
+      "128": "images/grey/icon128.png"
     }
   }
-  
+}
