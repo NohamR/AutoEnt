@@ -1,3 +1,6 @@
+# 2024 News :
+**La page de connexion a été modifiée, rendant l’extension inutilisable.**
+
 # Extension Chrome AutoEnt
 
 AutoEnt est une extension Chrome qui débloque gratuitement tous les articles sur Annabac. Dites adieu aux barrières de paiement et accédez aux contenus Annabac sans aucune restriction.
